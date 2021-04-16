@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="$LOCAL_SCHEMA$"
+        xsi:noNamespaceSchemaLocation="orange.xsd">
+<flower flowerCode="rm">
+    <name>roza</name>
+    <soil>grunt</soil>
+    <origin>rus</origin>
+    <visual_parameters color="" size=""> white, 15</visual_parameters>
+    <growing_tips temp = "">25 </growing_tips>
+    <multiplying>semena</multiplying>
+</flower>
+</root>
