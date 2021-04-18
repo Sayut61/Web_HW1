@@ -14,11 +14,15 @@ public class main {
             BufferedReader br = new BufferedReader(fr);
             String a;
             while ((a = br.readLine())!= null) {
-//               System.out.println(a);
-               String str = a;
-               Pattern pattern = Pattern.compile("[<name></name>&&[^<name></name>]]");
-                Matcher matcher = pattern.matcher(str);
-                System.out.println(matcher);
+                String regex = "<(\\w+)> ((\\w+)||(\\d+)) </(\\w+)>";
+                Pattern pattern = Pattern.compile(regex);
+                Matcher matcher = pattern.matcher(a);
+                boolean found = matcher.find();
+                if (found){
+                    System.out.println(matcher);
+                }else {
+                    System.out.println("not found");
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
