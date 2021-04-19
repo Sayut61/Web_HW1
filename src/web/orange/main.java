@@ -14,13 +14,12 @@ public class main {
             BufferedReader br = new BufferedReader(fr);
             String a;
             while ((a = br.readLine())!= null) {
-                String regex = "<(\\w+)> ((\\w+)||(\\d+)) </(\\w+)>";
+                String regex = "<(\\w+)> (\\w+) </(\\w+)>";
                 Pattern pattern = Pattern.compile(regex);
                 Matcher matcher = pattern.matcher(a);
                 while (matcher.find()){
                     System.out.println(matcher.group(2));
                 }
-
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
