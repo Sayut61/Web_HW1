@@ -17,12 +17,10 @@ public class main {
                 String regex = "<(\\w+)> ((\\w+)||(\\d+)) </(\\w+)>";
                 Pattern pattern = Pattern.compile(regex);
                 Matcher matcher = pattern.matcher(a);
-                boolean found = matcher.find();
-                if (found){
-                    System.out.println(matcher);
-                }else {
-                    System.out.println("not found");
+                while (matcher.find()){
+                    System.out.println(matcher.group());
                 }
+
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
