@@ -18,7 +18,7 @@ public class main {
                 Pattern pattern = Pattern.compile(regex);
                 Matcher matcher = pattern.matcher(a);
                 while (matcher.find()){
-                    System.out.println(matcher.group());
+                    System.out.println(matcher.group(2));
                 }
 
             }
